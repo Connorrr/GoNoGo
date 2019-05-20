@@ -53,6 +53,8 @@ class BlockViewController: UIViewController {
             playEasterEgg()
         }
         
+        block = Block(isPractice: true)
+        
         let random = false
         if blockType != nil {
             if blockType == .mixed {

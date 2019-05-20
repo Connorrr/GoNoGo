@@ -17,8 +17,28 @@ class Block {
     let percentageSwitches : Int?
     var isEvenOdd : Bool?               // Tells whether the single trial block is even/odd or vowel/consonant
     var trials : [TrialInfo]? = []
-    var isTrialSwitch : [Bool] = []
+    var isGoTrial : [Bool] = []
     
+    
+    
+    
+    /// Builds the isGoTrialList in this class based on whether its a practice block or not
+    /// Practice block will be 10 trials and not will be 60
+    /// - Parameter isPractice: set true if this is a practice block
+    init(isPractice: Bool){
+        isEvenOdd = false
+        blockType = .single
+        startTrialCondition = TrialCondition.consonant
+        percentageSwitches = nil
+        
+        if (isPractice){
+            numberOfTrials = 10
+        }else{
+            numberOfTrials = 60
+        }
+        
+        buildTrialList()
+    }
     
     /// Single condition initializer
     ///
@@ -67,6 +87,39 @@ class Block {
         buildTrialList()
     }
     
+    private func buildGoNoGo(){
+        var typeBlock : [Int] = []
+        var loops : Int
+        
+        loops = numberOfTrials! / 10
+        for _ in 1 ... loops {
+            typeBlock.append(1)
+            typeBlock.append(2)
+            typeBlock.append(3)
+        }
+        
+        typeBlock.shuffle()
+        dump(typeBlock)
+        
+        for i in typeBlock {
+            if (i == 1){
+                isGoTrial.append(false)
+                isGoTrial.append(true)
+            }else if(i == 2){
+                isGoTrial.append(false)
+                isGoTrial.append(false)
+                isGoTrial.append(true)
+            }else{
+                isGoTrial.append(false)
+                isGoTrial.append(false)
+                isGoTrial.append(false)
+                isGoTrial.append(false)
+                isGoTrial.append(true)
+            }
+        }
+        
+    }
+    
     private func buildTrialList() {
         
         var trial = TrialInfo()
@@ -76,7 +129,7 @@ class Block {
             trial = getTrial(trialNum: i)
             
             if blockType != .single {
-                trial.isSwitchTrial = isTrialSwitch[i-1]
+                trial.isSwitchTrial = isGoTrial[i-1]
                 if trial.isSwitchTrial! {
                     isEvenOdd = !isEvenOdd!
                 }
@@ -113,13 +166,13 @@ class Block {
         print("This is the sum check for the sort function.  This number should be 120:  \(sum)")
         
         for i in switchArray {
-            isTrialSwitch.append(true)
+            isGoTrial.append(true)
             for _ in 1 ..< i {
-                isTrialSwitch.append(false)
+                isGoTrial.append(false)
             }
         }
         
-        print("This is the count for the switch array.  It should = 120:  \(isTrialSwitch.count)")
+        print("This is the count for the switch array.  It should = 120:  \(isGoTrial.count)")
     }
     
     /// Fills the isTrialSwitch array with bools to use when building the mixed stim blocks
@@ -139,7 +192,7 @@ class Block {
         var repeatSwitchCount : Int = 0
         var repeatNonSwitchCount : Int = 1
         
-        isTrialSwitch.append(nonSwitchArray.removeFirst())
+        isGoTrial.append(nonSwitchArray.removeFirst())
         //var isNoPull = true
         for _ in 1 ..< numberOfTrials! {
             //  THis part will be reincluded when we force the maximum repeats in a row factor
@@ -157,24 +210,24 @@ class Block {
 //            }else{
                 if randomBool {     // Put in a switch trial if it's still available
                     if switchArray.count > 0 {
-                        isTrialSwitch.append(switchArray.removeFirst())
+                        isGoTrial.append(switchArray.removeFirst())
                         repeatSwitchCount = repeatSwitchCount + 1
                         repeatNonSwitchCount = 0
                         //isNoPull = false
                     }else{
-                        isTrialSwitch.append(nonSwitchArray.removeFirst())
+                        isGoTrial.append(nonSwitchArray.removeFirst())
                         repeatNonSwitchCount = repeatNonSwitchCount + 1
                         repeatSwitchCount = 0
                         //isNoPull = false
                     }
                 }else{              // Put in a nonswitch trial if it's still available
                     if nonSwitchArray.count > 0 {
-                        isTrialSwitch.append(nonSwitchArray.removeFirst())
+                        isGoTrial.append(nonSwitchArray.removeFirst())
                         repeatNonSwitchCount = repeatNonSwitchCount + 1
                         repeatSwitchCount = 0
                         //isNoPull = false
                     }else{
-                        isTrialSwitch.append(switchArray.removeFirst())
+                        isGoTrial.append(switchArray.removeFirst())
                         repeatSwitchCount = repeatSwitchCount + 1
                         repeatNonSwitchCount = 0
                         //isNoPull = false

@@ -101,8 +101,8 @@
 		BF106FE321BF417800DC6207 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
 		BF106FE421BF417800DC6207 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		BF106FE521BF417900DC6207 /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
-		BF106FFE21BF41ED00DC6207 /* jasmine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = jasmine.jpg; path = TaskSwitching/EasterEgg/jasmine.jpg; sourceTree = SOURCE_ROOT; };
-		BF106FFF21BF41ED00DC6207 /* AWholeNewWorld.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = AWholeNewWorld.mp3; path = TaskSwitching/EasterEgg/AWholeNewWorld.mp3; sourceTree = SOURCE_ROOT; };
+		BF106FFE21BF41ED00DC6207 /* jasmine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = jasmine.jpg; path = GoNoGo/EasterEgg/jasmine.jpg; sourceTree = SOURCE_ROOT; };
+		BF106FFF21BF41ED00DC6207 /* AWholeNewWorld.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = AWholeNewWorld.mp3; path = GoNoGo/EasterEgg/AWholeNewWorld.mp3; sourceTree = SOURCE_ROOT; };
 		BF10700321BF791F00DC6207 /* LetterNumberStim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterNumberStim.swift; sourceTree = "<group>"; };
 		BF4FE51121C9EA1500C758EF /* LeftButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LeftButton.png; path = Buttons/LeftButton.png; sourceTree = SOURCE_ROOT; };
 		BF4FE51221C9EA1600C758EF /* RightButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RightButton.png; path = Buttons/RightButton.png; sourceTree = SOURCE_ROOT; };
@@ -690,7 +690,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HTSF3MHP5C;
-				INFOPLIST_FILE = "$(SRCROOT)/TaskSwitching/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/GoNoGo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.daisychain.GoNoGoMikaela;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -707,7 +707,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HTSF3MHP5C;
-				INFOPLIST_FILE = "$(SRCROOT)/TaskSwitching/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/GoNoGo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.daisychain.GoNoGoMikaela;
 				PRODUCT_NAME = "$(TARGET_NAME)";
