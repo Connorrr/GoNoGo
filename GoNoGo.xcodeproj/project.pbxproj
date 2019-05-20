@@ -335,7 +335,7 @@
 		BF884DF0205A2044002262DB = {
 			isa = PBXGroup;
 			children = (
-				BF884DFB205A2044002262DB /* TaskSwitching */,
+				BF884DFB205A2044002262DB /* GoNoGo */,
 				BF884DFA205A2044002262DB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -348,7 +348,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BF884DFB205A2044002262DB /* TaskSwitching */ = {
+		BF884DFB205A2044002262DB /* GoNoGo */ = {
 			isa = PBXGroup;
 			children = (
 				BF1E38F620BF874E001D851F /* EasterEgg */,
@@ -368,7 +368,7 @@
 				BF884E05205A2044002262DB /* LaunchScreen.storyboard */,
 				BF884E08205A2044002262DB /* Info.plist */,
 			);
-			path = TaskSwitching;
+			path = GoNoGo;
 			sourceTree = "<group>";
 		};
 		BF884E0E205A2087002262DB /* Block */ = {
