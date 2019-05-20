@@ -125,7 +125,7 @@
 		BF80566B20A12A2200CC4446 /* Opening2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Opening2.html; sourceTree = "<group>"; };
 		BF80566D20A12C9600CC4446 /* PracticeEnd.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = PracticeEnd.html; sourceTree = "<group>"; };
 		BF80567020A2661700CC4446 /* buzzer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = buzzer.mp3; sourceTree = "<group>"; };
-		BF884DF9205A2044002262DB /* TaskSwitching.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskSwitching.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF884DF9205A2044002262DB /* GoNoGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoNoGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF884DFC205A2044002262DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF884DFE205A2044002262DB /* InstructionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionViewController.swift; sourceTree = "<group>"; };
 		BF884E01205A2044002262DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -343,7 +343,7 @@
 		BF884DFA205A2044002262DB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BF884DF9205A2044002262DB /* TaskSwitching.app */,
+				BF884DF9205A2044002262DB /* GoNoGo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -416,9 +416,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BF884DF8205A2044002262DB /* TaskSwitching */ = {
+		BF884DF8205A2044002262DB /* GoNoGo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BF884E0B205A2044002262DB /* Build configuration list for PBXNativeTarget "TaskSwitching" */;
+			buildConfigurationList = BF884E0B205A2044002262DB /* Build configuration list for PBXNativeTarget "GoNoGo" */;
 			buildPhases = (
 				BF884DF5205A2044002262DB /* Sources */,
 				BF884DF6205A2044002262DB /* Frameworks */,
@@ -428,9 +428,9 @@
 			);
 			dependencies = (
 			);
-			name = TaskSwitching;
+			name = GoNoGo;
 			productName = CognativeFlexabilityTraining;
-			productReference = BF884DF9205A2044002262DB /* TaskSwitching.app */;
+			productReference = BF884DF9205A2044002262DB /* GoNoGo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -449,7 +449,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BF884DF4205A2044002262DB /* Build configuration list for PBXProject "TaskSwitching" */;
+			buildConfigurationList = BF884DF4205A2044002262DB /* Build configuration list for PBXProject "GoNoGo" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -462,7 +462,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BF884DF8205A2044002262DB /* TaskSwitching */,
+				BF884DF8205A2044002262DB /* GoNoGo */,
 			);
 		};
 /* End PBXProject section */
@@ -692,7 +692,7 @@
 				DEVELOPMENT_TEAM = HTSF3MHP5C;
 				INFOPLIST_FILE = "$(SRCROOT)/TaskSwitching/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.daisychain.TaskSwitchingSimone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.daisychain.GoNoGoMikaela;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -709,7 +709,7 @@
 				DEVELOPMENT_TEAM = HTSF3MHP5C;
 				INFOPLIST_FILE = "$(SRCROOT)/TaskSwitching/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.daisychain.TaskSwitchingSimone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.daisychain.GoNoGoMikaela;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -720,7 +720,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BF884DF4205A2044002262DB /* Build configuration list for PBXProject "TaskSwitching" */ = {
+		BF884DF4205A2044002262DB /* Build configuration list for PBXProject "GoNoGo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF884E09205A2044002262DB /* Debug */,
@@ -729,7 +729,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BF884E0B205A2044002262DB /* Build configuration list for PBXNativeTarget "TaskSwitching" */ = {
+		BF884E0B205A2044002262DB /* Build configuration list for PBXNativeTarget "GoNoGo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF884E0C205A2044002262DB /* Debug */,
