@@ -53,7 +53,7 @@ class BlockViewController: UIViewController {
             playEasterEgg()
         }
         
-        block = Block(isPractice: true)
+        block = Block(isPractice: false)
         
         let random = false
         if blockType != nil {

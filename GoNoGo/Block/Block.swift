@@ -37,7 +37,7 @@ class Block {
             numberOfTrials = 60
         }
         
-        buildTrialList()
+        buildGoNoGo()
     }
     
     /// Single condition initializer
@@ -99,7 +99,6 @@ class Block {
         }
         
         typeBlock.shuffle()
-        dump(typeBlock)
         
         for i in typeBlock {
             if (i == 1){
@@ -117,6 +116,8 @@ class Block {
                 isGoTrial.append(true)
             }
         }
+        
+        dump(isGoTrial)
         
     }
     
