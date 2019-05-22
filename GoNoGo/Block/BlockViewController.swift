@@ -56,7 +56,6 @@ class BlockViewController: UIViewController {
         }
         
         setButtonLabels()
-        block = Block(blockType: self.blockType!)
         
         //let random = false
         if blockType != nil {
@@ -185,7 +184,7 @@ class BlockViewController: UIViewController {
 
         trialData.time = Date(timeIntervalSinceNow: 0.25).timeIntervalSince(startTime).description
         blockData.append(trialData)
-        if (currentTrial < block!.trials!.count) {
+        if (currentTrial < block!.numberOfTrials!) {
             self.currentTrial = self.currentTrial + 1
             repeatTimer = Timer.scheduledTimer(withTimeInterval: 0.25, repeats: false, block: {(repeatTimer) in self.executeBlock()})
         }else{      //MARK:  This is the end of the trials
@@ -316,7 +315,7 @@ class BlockViewController: UIViewController {
                 if blockProgress! == 0 {
                     print("You are at the end of the practices")
                     viewController.instructionsState = .practiceEnd
-                } else if blockProgress! + 1 < viewController.experimentStructure!.count {
+                } else if blockProgress! + 1 < viewController.numBlocks {
                     viewController.instructionsState = .breakText
                 }else{
                     viewController.instructionsState = .goodbyeText

@@ -11,8 +11,9 @@ import AVFoundation
 
 class ViewController: UIViewController, UITextViewDelegate {
     
-    var experimentStructure : [BlockType]?
+    var experimentStructure : [BlockType] = [.practice,.angryneutral, .happyneutral, .neutralangry, .neutralhappy]
     let isEvenOddStructure : [Bool?] = [nil, true, false, nil]                  //  This is used to define the single blocks types and whether they are Task A (even,odd) or B (vowel,consonant)
+    let numBlocks = 4
     
     var blockProgress : Int = 0
     var instructionsState : InstructionsTextState?
@@ -30,7 +31,7 @@ class ViewController: UIViewController, UITextViewDelegate {
         
         logFileMaker = LogFileMaker(fileName: "\(StaticVars.id)-\(getDateString())")
         
-        setExperimentStructure()
+        //setExperimentStructure()  TODO:  Add this in when the group selection works
         
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.viewTapped))
         instructionsTextView.addGestureRecognizer(tapRecognizer)
@@ -46,6 +47,18 @@ class ViewController: UIViewController, UITextViewDelegate {
         case .breakText:
             setText("Break")
             setTestTimer(isFinished: false)
+            switch experimentStructure[blockProgress] {
+            case .angryneutral:
+                setText("AngryNeutral")
+            case .happyneutral:
+                setText("HappyNeutral")
+            case .neutralangry:
+                setText("NeutralAngry")
+            case .neutralhappy:
+                setText("NeutralHappy")
+            case .practice:
+                break
+            }
         case .practiceEnd:
             setText("PracticeEnd")
             setTestTimer(isFinished: false)
@@ -99,7 +112,7 @@ class ViewController: UIViewController, UITextViewDelegate {
         if instructionsState! == .goodbyeText {
             performSegue(withIdentifier: "instructionsToLogin", sender: nil)
         } else if instructionsState! == .openingText && !readyToBeginPractice {
-                setText("Opening2")
+            setText("Opening2")
             readyToBeginPractice = true
         } else {
             performSegue(withIdentifier: "presentBlock", sender: nil)
@@ -109,7 +122,7 @@ class ViewController: UIViewController, UITextViewDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "presentBlock" {
             if let blockViewController = segue.destination as? BlockViewController {
-                blockViewController.blockType = experimentStructure![blockProgress]
+                blockViewController.blockType = experimentStructure[blockProgress]
                 blockViewController.isEvenOdd = isEvenOddStructure[blockProgress]
                 blockViewController.blockProgress = blockProgress
             }
