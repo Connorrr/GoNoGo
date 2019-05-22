@@ -9,6 +9,8 @@
 //  Block Types
 enum BlockType {
     case practice
-    case mixed
-    case single
+    case angryneutral
+    case neutralangry
+    case happyneutral
+    case neutralhappy
 }

@@ -11,7 +11,7 @@ import AVFoundation
 
 class ViewController: UIViewController, UITextViewDelegate {
     
-    let experimentStructure : [BlockType] = [.practice,.single,.single,.mixed]
+    var experimentStructure : [BlockType]?
     let isEvenOddStructure : [Bool?] = [nil, true, false, nil]                  //  This is used to define the single blocks types and whether they are Task A (even,odd) or B (vowel,consonant)
     
     var blockProgress : Int = 0
@@ -29,6 +29,8 @@ class ViewController: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         
         logFileMaker = LogFileMaker(fileName: "\(StaticVars.id)-\(getDateString())")
+        
+        setExperimentStructure()
         
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.viewTapped))
         instructionsTextView.addGestureRecognizer(tapRecognizer)
@@ -86,6 +88,12 @@ class ViewController: UIViewController, UITextViewDelegate {
         return dateFormatter.string(from: date)
     }
     
+    func setExperimentStructure(){
+        var structure : [BlockType] = [.angryneutral, .happyneutral, .neutralangry, .neutralhappy]
+        structure.shuffle()
+        experimentStructure = [.practice, structure[0], structure[1], structure[2], structure[3]]
+    }
+    
     var readyToBeginPractice = false
     @objc func viewTapped() {
         if instructionsState! == .goodbyeText {
@@ -101,7 +109,7 @@ class ViewController: UIViewController, UITextViewDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "presentBlock" {
             if let blockViewController = segue.destination as? BlockViewController {
-                blockViewController.blockType = experimentStructure[blockProgress]
+                blockViewController.blockType = experimentStructure![blockProgress]
                 blockViewController.isEvenOdd = isEvenOddStructure[blockProgress]
                 blockViewController.blockProgress = blockProgress
             }

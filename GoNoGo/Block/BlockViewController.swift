@@ -21,13 +21,14 @@ class BlockViewController: UIViewController {
     @IBOutlet weak var leftButton: ResponseButton!
     @IBOutlet weak var fruitButton: ResponseButton!     //  This button is not used in the TS app
     @IBOutlet weak var redButton: ResponseButton!       //  This button is not used in the TS app
-    @IBOutlet weak var rightButton: ResponseButton!
+    @IBOutlet weak var goButton: ResponseButton!
     
     var blockType : BlockType?
     var isEvenOdd : Bool?
     var block : Block?
     var blockProgress : Int?
     var blockData : [TrialData] = []
+    var fileNames : [String]?
     
     var trialIndex : Int {
         return currentTrial-1
@@ -45,6 +46,7 @@ class BlockViewController: UIViewController {
         //  Set middle buttons to be invis in the containers
         redButton.alpha = 0.0
         fruitButton.alpha = 0.0
+        leftButton.alpha = 0.0
         
         print("The block type is:  ")
         dump(blockType)
@@ -53,30 +55,13 @@ class BlockViewController: UIViewController {
             playEasterEgg()
         }
         
-        block = Block(isPractice: false)
+        setButtonLabels()
+        block = Block(blockType: self.blockType!)
         
-        let random = false
+        //let random = false
         if blockType != nil {
-            if blockType == .mixed {
-                if random.randomBool() {
-                    block = Block(numberTrials: 120, startingTrialCondition: .vowel, isMixed: true, percentageOfSwitches: 25, isEvenOddStart:  false)
-                } else {
-                    block = Block(numberTrials: 120, startingTrialCondition: .even, isMixed: true, percentageOfSwitches: 25, isEvenOddStart:  true)
-                }
-            }else if blockType == .practice {
-                if random.randomBool() {
-                    block = Block(numberTrials: 30, startingTrialCondition: .vowel, isMixed: true, percentageOfSwitches: 50, isEvenOddStart:  false)
-                } else {
-                    block = Block(numberTrials: 30, startingTrialCondition: .even, isMixed: true, percentageOfSwitches: 50, isEvenOddStart:  true)
-                }
-            }else{
-                if random.randomBool() {
-                    block = Block(trialCondition: .vowel, isEvenOddBlock: isEvenOdd!)
-                } else {
-                    block = Block(trialCondition: .even, isEvenOddBlock: isEvenOdd!)
-                }
-            }
             
+            block = Block(blockType: self.blockType!)
             executeBlock()
             
         }else{
@@ -116,22 +101,11 @@ class BlockViewController: UIViewController {
     
     @IBAction func rightButtonPressed(_ sender: UIButton) {
         trialData.response = "right"
-        if block!.trials![trialIndex].isEvenOdd! {
-            checkCorr(response: .odd)
-        } else {
-            checkCorr(response: .consonant)
-        }
         forceProgress()
     }
     
-    func setButtonLabels(isEvenOddTrial: Bool) {
-        if isEvenOddTrial{
-            leftButton.setImage(#imageLiteral(resourceName: "EvenButton.png"), for: .normal)
-            rightButton.setImage(#imageLiteral(resourceName: "OddButton.png"), for: .normal)
-        }else{
-            leftButton.setImage(#imageLiteral(resourceName: "VowelButton.png"), for: .normal)
-            rightButton.setImage(#imageLiteral(resourceName: "ConsonantButton.png"), for: .normal)
-        }
+    func setButtonLabels() {
+        goButton.setImage(#imageLiteral(resourceName: "GoButton.png"), for: .normal)
     }
     
     //  Called after the response button is pressed
@@ -145,14 +119,14 @@ class BlockViewController: UIViewController {
     var repeatTimer : Timer?
     
     func executeBlock() {
-
-        //self.stimImage.image = block?.trials![trialIndex].stim!  //  No images in this version
-        self.stimLabel.text = block?.trials![trialIndex].stimLabel
+        print(block!.trialImageFilenames[trialIndex] + ".png")
+        self.stimImage.image = UIImage(named: block!.trialImageFilenames[trialIndex]) //  No images in this version
+        
         if StaticVars.id == "JasmineTest" {
             self.stimImage.image = #imageLiteral(resourceName: "jasmine.jpg")
         }
         
-        setButtonLabels(isEvenOddTrial: block!.trials![trialIndex].isEvenOdd!)
+        //setButtonLabels(isEvenOddTrial: block!.trials![trialIndex].isEvenOdd!)
         
         setUpTrialData()
         
@@ -175,12 +149,12 @@ class BlockViewController: UIViewController {
     }
     
     func displayTrial() {
-        self.setBoarder(isSwitch: block!.trials![trialIndex].isSwitchTrial!)
+        //self.setBoarder(isSwitch: block!.trials![trialIndex].isSwitchTrial!)
         self.fixationCross.isHidden = true
-        //self.stimImage.isHidden = false
-        self.stimLabel.isHidden = false
+        self.stimImage.isHidden = false
+        self.stimLabel.isHidden = true
         self.setButtonVisibility(isHidden: false)
-        self.responseTimer = Timer.scheduledTimer(withTimeInterval: 50000, repeats: false, block: { (responseTimer) in self.displayBlank() }) //Set to 50000 so it is essentially waiting for a response only
+        self.responseTimer = Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: { (responseTimer) in self.displayBlank() }) //Set to 50000 so it is essentially waiting for a response only
         self.trialStartTime = Date()
     }
     
@@ -208,11 +182,7 @@ class BlockViewController: UIViewController {
         self.boarderView.isHidden = true
         let defaults = UserDefaults.standard
         let startTime = defaults.object(forKey: "startTime") as! Date
-        if block!.trials![trialIndex].isEvenOdd!{
-            trialData.trialCondition = "EvenOdd"
-        }else{
-            trialData.trialCondition = "VowelCons"
-        }
+
         trialData.time = Date(timeIntervalSinceNow: 0.25).timeIntervalSince(startTime).description
         blockData.append(trialData)
         if (currentTrial < block!.trials!.count) {
@@ -254,7 +224,7 @@ class BlockViewController: UIViewController {
         self.leftButton.isHidden = isHidden
         self.fruitButton.isHidden = isHidden
         self.redButton.isHidden = isHidden
-        self.rightButton.isHidden = isHidden
+        self.goButton.isHidden = isHidden
     }
     
     func getResponseTime() {
@@ -290,23 +260,29 @@ class BlockViewController: UIViewController {
         switch blockType! {
         case .practice:
             trialData.blockType = "Practice"
-        case .mixed:
-            trialData.blockType = "Mixed"
-        case .single:
-            trialData.blockType = "Single"
+        case .neutralangry:
+            trialData.blockType = "NeutralAngry"
+        case .angryneutral:
+            trialData.blockType = "AngryNeutral"
+        case .happyneutral:
+            trialData.blockType = "HappyNeutral"
+        case .neutralhappy:
+            trialData.blockType = "NeutralHappy"
         }
         
-        trialData.stim = block!.trials![trialIndex].stimLabel!
-        switch block!.trials![trialIndex].condition! {
-        case .vowel:
-            trialData.trialCondition = "vowel"
-        case .consonant:
-            trialData.trialCondition = "consonant"
-        case .even:
-            trialData.trialCondition = "even"
-        case .odd:
-            trialData.trialCondition = "odd"
-        }
+        //  TODO:  Set the image for this trial
+        
+        //trialData.stim = block!.trials![trialIndex].stimLabel!
+//        switch block!.trials![trialIndex].condition! {
+//        case .vowel:
+//            trialData.trialCondition = "vowel"
+//        case .consonant:
+//            trialData.trialCondition = "consonant"
+//        case .even:
+//            trialData.trialCondition = "even"
+//        case .odd:
+//            trialData.trialCondition = "odd"
+//        }
     }
     
     func playEasterEgg () {
@@ -340,7 +316,7 @@ class BlockViewController: UIViewController {
                 if blockProgress! == 0 {
                     print("You are at the end of the practices")
                     viewController.instructionsState = .practiceEnd
-                } else if blockProgress! + 1 < viewController.experimentStructure.count {
+                } else if blockProgress! + 1 < viewController.experimentStructure!.count {
                     viewController.instructionsState = .breakText
                 }else{
                     viewController.instructionsState = .goodbyeText

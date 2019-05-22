@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0WW-hO-bz5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0WW-hO-bz5">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +13,7 @@
         <!--Login View Controller-->
         <scene sceneID="iNQ-WF-NeP">
             <objects>
-                <viewController id="0WW-hO-bz5" customClass="LoginViewController" customModule="TaskSwitching" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0WW-hO-bz5" customClass="LoginViewController" customModule="GoNoGo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WaS-J6-3mS">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,12 +70,12 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TaskSwitching" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GoNoGo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQJ-3k-GnA" userLabel="InstructionTextView" customClass="InstructionsTextView" customModule="TaskSwitching" customModuleProvider="target">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQJ-3k-GnA" userLabel="InstructionTextView" customClass="InstructionsTextView" customModule="GoNoGo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="768" height="1024"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
@@ -110,7 +110,7 @@
         <!--Block View Controller-->
         <scene sceneID="pEg-yr-4cp">
             <objects>
-                <viewController id="3uN-N6-O0y" customClass="BlockViewController" customModule="TaskSwitching" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3uN-N6-O0y" customClass="BlockViewController" customModule="GoNoGo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Kp-dG-Cfx">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -148,7 +148,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="m4I-l8-ad5" userLabel="ButtonStackView">
                                 <rect key="frame" x="50" y="872" width="668" height="102"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISt-hX-lUc" userLabel="LeftButton" customClass="ResponseButton" customModule="TaskSwitching" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISt-hX-lUc" userLabel="LeftButton" customClass="ResponseButton" customModule="GoNoGo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="152" height="102"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                         <state key="normal" title="Vowel" image="VowelButton.png">
@@ -158,7 +158,7 @@
                                             <action selector="leftButtonPressed:" destination="3uN-N6-O0y" eventType="touchUpInside" id="o3b-Ya-AC2"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RR1-JN-C05" userLabel="FruitButton" customClass="ResponseButton" customModule="TaskSwitching" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RR1-JN-C05" userLabel="FruitButton" customClass="ResponseButton" customModule="GoNoGo" customModuleProvider="target">
                                         <rect key="frame" x="172" y="0.0" width="152" height="102"/>
                                         <state key="normal" title="Less Than" image="FruitButton.png">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -167,7 +167,7 @@
                                             <action selector="fruitButtonPressed:" destination="3uN-N6-O0y" eventType="touchUpInside" id="lhp-2W-cuv"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQ0-d3-tlA" userLabel="RedButton" customClass="ResponseButton" customModule="TaskSwitching" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQ0-d3-tlA" userLabel="RedButton" customClass="ResponseButton" customModule="GoNoGo" customModuleProvider="target">
                                         <rect key="frame" x="344" y="0.0" width="152" height="102"/>
                                         <state key="normal" title="Even" image="RedButton.png">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -176,7 +176,7 @@
                                             <action selector="redButtonPressed:" destination="3uN-N6-O0y" eventType="touchUpInside" id="kdB-FF-jLV"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTH-RD-j9R" userLabel="RightButton" customClass="ResponseButton" customModule="TaskSwitching" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTH-RD-j9R" userLabel="RightButton" customClass="ResponseButton" customModule="GoNoGo" customModuleProvider="target">
                                         <rect key="frame" x="516" y="0.0" width="152" height="102"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                         <state key="normal" title="Consonant" image="ConsonantButton.png">
@@ -230,9 +230,9 @@
                         <outlet property="feedbackLabel" destination="oxx-Ow-HGg" id="LS0-fb-Iii"/>
                         <outlet property="fixationCross" destination="QUf-oY-C62" id="st5-ji-RzL"/>
                         <outlet property="fruitButton" destination="RR1-JN-C05" id="4dV-4T-W89"/>
+                        <outlet property="goButton" destination="DTH-RD-j9R" id="0Ek-WI-hdw"/>
                         <outlet property="leftButton" destination="ISt-hX-lUc" id="AT1-Q7-OYr"/>
                         <outlet property="redButton" destination="lQ0-d3-tlA" id="DMP-Sd-qxQ"/>
-                        <outlet property="rightButton" destination="DTH-RD-j9R" id="0Ek-WI-hdw"/>
                         <outlet property="stimImage" destination="ot3-dr-gSu" id="X2T-I5-X7W"/>
                         <outlet property="stimLabel" destination="aOV-Z0-f2y" id="4s1-1N-glD"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="returnToInstructions" id="Bbe-oS-AWF"/>
@@ -246,8 +246,8 @@
     <resources>
         <image name="1.png" width="300" height="300"/>
         <image name="ConsonantButton.png" width="209" height="209"/>
-        <image name="FruitButton.png" width="417" height="417"/>
-        <image name="RedButton.png" width="417" height="417"/>
+        <image name="FruitButton.png" width="100.08000183105469" height="100.08000183105469"/>
+        <image name="RedButton.png" width="100.08000183105469" height="100.08000183105469"/>
         <image name="VowelButton.png" width="209" height="209"/>
     </resources>
     <inferredMetricsTieBreakers>
