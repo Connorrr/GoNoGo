@@ -312,10 +312,7 @@ class BlockViewController: UIViewController {
         if segue.identifier == "returnToInstructions" {
             print("preparing for segue")
             if let viewController = segue.destination as? ViewController {
-                if blockProgress! == 0 {
-                    print("You are at the end of the practices")
-                    viewController.instructionsState = .practiceEnd
-                } else if blockProgress! + 1 < viewController.numBlocks {
+                if blockProgress! + 1 < viewController.numBlocks {
                     viewController.instructionsState = .breakText
                 }else{
                     viewController.instructionsState = .goodbyeText

@@ -119,13 +119,6 @@
                                 <rect key="frame" x="109" y="247" width="550" height="550"/>
                                 <color key="backgroundColor" red="0.90007048850000004" green="0.62913995980000004" blue="0.40531009439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="ot3-dr-gSu" userLabel="StimImage">
-                                <rect key="frame" x="134" y="272" width="500" height="500"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="500" id="MgE-Iv-3c5"/>
-                                    <constraint firstAttribute="width" secondItem="ot3-dr-gSu" secondAttribute="height" multiplier="1:1" id="f7k-0r-9mj"/>
-                                </constraints>
-                            </imageView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUf-oY-C62" userLabel="FixationCross">
                                 <rect key="frame" x="84" y="447" width="600" height="134"/>
                                 <constraints>
@@ -133,6 +126,13 @@
                                     <constraint firstAttribute="width" constant="600" id="vx3-jW-AdA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="118"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOV-Z0-f2y" userLabel="StimLabel">
+                                <rect key="frame" x="134" y="272" width="500" height="500"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="204"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -145,6 +145,13 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AF2" translatesAutoresizingMaskIntoConstraints="NO" id="ot3-dr-gSu" userLabel="StimImage">
+                                <rect key="frame" x="134" y="228" width="500" height="580"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="500" id="MgE-Iv-3c5"/>
+                                    <constraint firstAttribute="width" secondItem="ot3-dr-gSu" secondAttribute="height" multiplier="1:1" constant="-80.000000000000114" id="f7k-0r-9mj"/>
+                                </constraints>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="m4I-l8-ad5" userLabel="ButtonStackView">
                                 <rect key="frame" x="50" y="872" width="668" height="102"/>
                                 <subviews>
@@ -193,13 +200,6 @@
                                     <constraint firstItem="DTH-RD-j9R" firstAttribute="width" secondItem="lQ0-d3-tlA" secondAttribute="width" id="sns-Yx-U78"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOV-Z0-f2y" userLabel="StimLabel">
-                                <rect key="frame" x="134" y="272" width="500" height="500"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="204"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -207,16 +207,16 @@
                             <constraint firstItem="QUf-oY-C62" firstAttribute="centerY" secondItem="Jc3-94-6bU" secondAttribute="centerY" constant="-8" id="24V-Zc-O2j"/>
                             <constraint firstItem="Jc3-94-6bU" firstAttribute="trailing" secondItem="m4I-l8-ad5" secondAttribute="trailing" constant="50" id="3r1-1T-HYr"/>
                             <constraint firstItem="QUf-oY-C62" firstAttribute="centerX" secondItem="Jc3-94-6bU" secondAttribute="centerX" id="4xz-At-3o6"/>
-                            <constraint firstItem="ot3-dr-gSu" firstAttribute="centerY" secondItem="Jc3-94-6bU" secondAttribute="centerY" id="7oV-aW-u0P"/>
+                            <constraint firstItem="ot3-dr-gSu" firstAttribute="centerY" secondItem="Jc3-94-6bU" secondAttribute="centerY" constant="-4" id="7oV-aW-u0P"/>
                             <constraint firstItem="oxx-Ow-HGg" firstAttribute="leading" secondItem="Jc3-94-6bU" secondAttribute="leading" constant="50" id="9Zm-kh-3Dt"/>
                             <constraint firstItem="aOV-Z0-f2y" firstAttribute="trailing" secondItem="ot3-dr-gSu" secondAttribute="trailing" id="Gty-QG-afl"/>
                             <constraint firstItem="Jc3-94-6bU" firstAttribute="trailing" secondItem="oxx-Ow-HGg" secondAttribute="trailing" constant="50" id="IEu-7Z-HqA"/>
-                            <constraint firstItem="NEx-hh-i0n" firstAttribute="height" secondItem="ot3-dr-gSu" secondAttribute="height" constant="50" id="Wu1-Og-G8U"/>
-                            <constraint firstItem="m4I-l8-ad5" firstAttribute="top" secondItem="ot3-dr-gSu" secondAttribute="bottom" constant="100" id="dAb-30-M9X"/>
+                            <constraint firstItem="NEx-hh-i0n" firstAttribute="height" secondItem="ot3-dr-gSu" secondAttribute="height" constant="-30" id="Wu1-Og-G8U"/>
+                            <constraint firstItem="m4I-l8-ad5" firstAttribute="top" secondItem="ot3-dr-gSu" secondAttribute="bottom" constant="64" id="dAb-30-M9X"/>
                             <constraint firstItem="NEx-hh-i0n" firstAttribute="centerX" secondItem="Jc3-94-6bU" secondAttribute="centerX" id="dJK-cB-NpG"/>
                             <constraint firstItem="ot3-dr-gSu" firstAttribute="centerX" secondItem="Jc3-94-6bU" secondAttribute="centerX" id="fCE-FU-zzp"/>
-                            <constraint firstItem="aOV-Z0-f2y" firstAttribute="bottom" secondItem="ot3-dr-gSu" secondAttribute="bottom" id="kOT-T5-mQ9"/>
-                            <constraint firstItem="aOV-Z0-f2y" firstAttribute="top" secondItem="ot3-dr-gSu" secondAttribute="top" id="lBk-Dd-PWy"/>
+                            <constraint firstItem="aOV-Z0-f2y" firstAttribute="bottom" secondItem="ot3-dr-gSu" secondAttribute="bottom" constant="-36" id="kOT-T5-mQ9"/>
+                            <constraint firstItem="aOV-Z0-f2y" firstAttribute="top" secondItem="ot3-dr-gSu" secondAttribute="top" constant="44" id="lBk-Dd-PWy"/>
                             <constraint firstItem="Jc3-94-6bU" firstAttribute="bottom" secondItem="m4I-l8-ad5" secondAttribute="bottom" constant="50" id="mZ3-6Q-j8d"/>
                             <constraint firstItem="aOV-Z0-f2y" firstAttribute="leading" secondItem="ot3-dr-gSu" secondAttribute="leading" id="npk-vs-ysN"/>
                             <constraint firstItem="NEx-hh-i0n" firstAttribute="centerY" secondItem="Jc3-94-6bU" secondAttribute="centerY" id="puy-XR-iUF"/>
@@ -244,7 +244,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1.png" width="300" height="300"/>
+        <image name="AF2" width="506" height="650"/>
         <image name="ConsonantButton.png" width="209" height="209"/>
         <image name="FruitButton.png" width="100.08000183105469" height="100.08000183105469"/>
         <image name="RedButton.png" width="100.08000183105469" height="100.08000183105469"/>
