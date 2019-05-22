@@ -29,6 +29,7 @@ class BlockViewController: UIViewController {
     var blockProgress : Int?
     var blockData : [TrialData] = []
     var fileNames : [String]?
+    var wasResponse = false
     
     var trialIndex : Int {
         return currentTrial-1
@@ -77,9 +78,9 @@ class BlockViewController: UIViewController {
     @IBAction func leftButtonPressed(_ sender: UIButton) {
         trialData.response = "left"
         if block!.trials![trialIndex].isEvenOdd! {
-            checkCorr(response: .even)
+            checkCorr()
         } else {
-            checkCorr(response: .vowel)
+            checkCorr()
         }
         forceProgress()
     }
@@ -87,19 +88,20 @@ class BlockViewController: UIViewController {
     //  NOT USED
     @IBAction func fruitButtonPressed(_ sender: UIButton) {
         trialData.response = "fruit"
-        checkCorr(response: .odd)
+        checkCorr()
         forceProgress()
     }
     
     //  NOT USED
     @IBAction func redButtonPressed(_ sender: UIButton) {
         trialData.response = "red"
-        checkCorr(response: .vowel)
+        checkCorr()
         forceProgress()
     }
     
-    @IBAction func rightButtonPressed(_ sender: UIButton) {
-        trialData.response = "right"
+    @IBAction func goButtonPressed(_ sender: UIButton) {
+        trialData.response = "Go"
+        wasResponse = true
         forceProgress()
     }
     
@@ -171,6 +173,7 @@ class BlockViewController: UIViewController {
     }
     
     func displayBlank() {
+        checkCorr()
         getResponseTime()
         self.feedbackLabel.isHidden = true
         self.fixationCross.textColor = .black
@@ -232,11 +235,19 @@ class BlockViewController: UIViewController {
         trialData.rt = rT
     }
     
-    func checkCorr(response: TrialCondition) {
-        if response == block!.trials![trialIndex].condition! {
-            trialData.corr = 1
+    func checkCorr() {
+        if (block!.isGoTrial[trialIndex]){
+            if (wasResponse){
+                trialData.corr = 1
+            }else{
+                trialData.corr = 0
+            }
         }else{
-            trialData.corr = 0
+            if (wasResponse){
+                trialData.corr = 0
+            }else{
+                trialData.corr = 1
+            }
         }
     }
     
