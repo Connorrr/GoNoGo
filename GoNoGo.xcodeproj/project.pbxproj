@@ -98,6 +98,7 @@
 		BF87022722952D35008413B2 /* HappyNeutral.html in Resources */ = {isa = PBXBuildFile; fileRef = BF87022322952D34008413B2 /* HappyNeutral.html */; };
 		BF87022822952D35008413B2 /* AngryNeutral.html in Resources */ = {isa = PBXBuildFile; fileRef = BF87022422952D34008413B2 /* AngryNeutral.html */; };
 		BF87022922952D35008413B2 /* NeutralAngry.html in Resources */ = {isa = PBXBuildFile; fileRef = BF87022522952D34008413B2 /* NeutralAngry.html */; };
+		BF87022B229656DF008413B2 /* String+IsInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF87022A229656DF008413B2 /* String+IsInt.swift */; };
 		BF884DFD205A2044002262DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF884DFC205A2044002262DB /* AppDelegate.swift */; };
 		BF884DFF205A2044002262DB /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF884DFE205A2044002262DB /* InstructionViewController.swift */; };
 		BF884E02205A2044002262DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF884E00205A2044002262DB /* Main.storyboard */; };
@@ -207,6 +208,7 @@
 		BF87022322952D34008413B2 /* HappyNeutral.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = HappyNeutral.html; sourceTree = "<group>"; };
 		BF87022422952D34008413B2 /* AngryNeutral.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = AngryNeutral.html; sourceTree = "<group>"; };
 		BF87022522952D34008413B2 /* NeutralAngry.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = NeutralAngry.html; sourceTree = "<group>"; };
+		BF87022A229656DF008413B2 /* String+IsInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+IsInt.swift"; sourceTree = "<group>"; };
 		BF884DF9205A2044002262DB /* GoNoGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoNoGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF884DFC205A2044002262DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF884DFE205A2044002262DB /* InstructionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionViewController.swift; sourceTree = "<group>"; };
@@ -447,6 +449,7 @@
 				BF71383D205F6D74008D0108 /* Bool+Random.swift */,
 				BFE4C836205F757700E24D5D /* UIImage+StimSelect.swift */,
 				BFE4C838205F76A700E24D5D /* Int+Random.swift */,
+				BF87022A229656DF008413B2 /* String+IsInt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -714,6 +717,7 @@
 				BFE4C837205F757700E24D5D /* UIImage+StimSelect.swift in Sources */,
 				BF71383B205F42A9008D0108 /* ResponseButton.swift in Sources */,
 				BF6CB0FD206A103F00FBCF39 /* LogFileMaker.swift in Sources */,
+				BF87022B229656DF008413B2 /* String+IsInt.swift in Sources */,
 				BF10700421BF791F00DC6207 /* LetterNumberStim.swift in Sources */,
 				BF884E18205A24B0002262DB /* InstructionsTextView.swift in Sources */,
 				BFE4C839205F76A700E24D5D /* Int+Random.swift in Sources */,

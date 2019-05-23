@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3rb-4E-hqa" userLabel="idField">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Participant ID" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3rb-4E-hqa" userLabel="idField">
                                 <rect key="frame" x="234" y="507" width="300" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="yWa-ud-6fA"/>
@@ -45,21 +45,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Group Number" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tKK-AE-umW" userLabel="groupNumberField">
+                                <rect key="frame" x="234" y="558" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="0iH-1C-6Z8"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="tKK-AE-umW" firstAttribute="height" secondItem="3rb-4E-hqa" secondAttribute="height" id="8aZ-j4-4vN"/>
                             <constraint firstItem="3rb-4E-hqa" firstAttribute="top" secondItem="zjG-bv-Umc" secondAttribute="bottom" constant="78" id="EPo-vc-2G0"/>
+                            <constraint firstItem="tKK-AE-umW" firstAttribute="centerX" secondItem="3rb-4E-hqa" secondAttribute="centerX" id="JEC-xb-Kxz"/>
                             <constraint firstItem="yU5-BK-IdP" firstAttribute="top" secondItem="3rb-4E-hqa" secondAttribute="bottom" constant="71" id="JfE-a2-hpM"/>
                             <constraint firstItem="yU5-BK-IdP" firstAttribute="centerX" secondItem="Zh3-kQ-768" secondAttribute="centerX" id="LjD-sX-fZG"/>
                             <constraint firstItem="3rb-4E-hqa" firstAttribute="centerX" secondItem="Zh3-kQ-768" secondAttribute="centerX" id="OEe-bb-Jya"/>
                             <constraint firstItem="3rb-4E-hqa" firstAttribute="centerY" secondItem="Zh3-kQ-768" secondAttribute="centerY" id="PUp-ar-gVW"/>
+                            <constraint firstItem="tKK-AE-umW" firstAttribute="width" secondItem="3rb-4E-hqa" secondAttribute="width" id="RDS-zS-saO"/>
+                            <constraint firstItem="tKK-AE-umW" firstAttribute="top" secondItem="3rb-4E-hqa" secondAttribute="bottom" constant="21" id="atu-Rc-KUG"/>
                             <constraint firstItem="yU5-BK-IdP" firstAttribute="trailing" secondItem="3rb-4E-hqa" secondAttribute="trailing" id="f6K-5o-bTM"/>
                             <constraint firstItem="zjG-bv-Umc" firstAttribute="centerX" secondItem="Zh3-kQ-768" secondAttribute="centerX" id="rSJ-va-Wfb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Zh3-kQ-768"/>
                     </view>
                     <connections>
+                        <outlet property="groupNumberTextField" destination="tKK-AE-umW" id="zmJ-xq-XHv"/>
                         <outlet property="idField" destination="3rb-4E-hqa" id="LmX-pW-WYd"/>
+                        <outlet property="startButton" destination="yU5-BK-IdP" id="or9-LE-hSO"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="loginToInstructions" id="oVc-5C-Hki"/>
                     </connections>
                 </viewController>
@@ -146,7 +161,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AF2" translatesAutoresizingMaskIntoConstraints="NO" id="ot3-dr-gSu" userLabel="StimImage">
-                                <rect key="frame" x="134" y="228" width="500" height="580"/>
+                                <rect key="frame" x="134" y="228" width="500.00000000000011" height="580"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="500" id="MgE-Iv-3c5"/>
                                     <constraint firstAttribute="width" secondItem="ot3-dr-gSu" secondAttribute="height" multiplier="1:1" constant="-80.000000000000114" id="f7k-0r-9mj"/>
@@ -251,6 +266,6 @@
         <image name="VowelButton.png" width="209" height="209"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Bbe-oS-AWF"/>
+        <segue reference="oVc-5C-Hki"/>
     </inferredMetricsTieBreakers>
 </document>
