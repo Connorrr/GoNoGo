@@ -1,2 +1,2 @@
-# GoNoGo Task
-This is a GoNoGo Task which is based on the Task Switching App.  It is developed for the iPad using Swift.
+# StopSignal Task
+This is a StopSignal Task which is based on the GoNoGo Task.  It is developed for the iPad using Swift.
