@@ -131,7 +131,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUf-oY-C62" userLabel="FixationCross">
-                                <rect key="frame" x="212" y="319" width="600" height="134"/>
+                                <rect key="frame" x="212" y="227" width="600" height="134"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="134" id="KLL-V9-DoM"/>
                                     <constraint firstAttribute="width" constant="600" id="vx3-jW-AdA"/>
@@ -149,17 +149,17 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="AF2" translatesAutoresizingMaskIntoConstraints="NO" id="ot3-dr-gSu" userLabel="StimImage">
-                                <rect key="frame" x="365.99999999999994" y="204" width="292.00000000000017" height="372"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AF2" translatesAutoresizingMaskIntoConstraints="NO" id="ot3-dr-gSu" userLabel="StimImage">
+                                <rect key="frame" x="282.99999999999994" y="25" width="458.00000000000017" height="538"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ot3-dr-gSu" secondAttribute="height" multiplier="1:1" constant="-80.000000000000114" id="f7k-0r-9mj"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="m4I-l8-ad5" userLabel="ButtonStackView">
-                                <rect key="frame" x="50" y="640" width="924" height="100"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="m4I-l8-ad5" userLabel="ButtonStackView">
+                                <rect key="frame" x="50" y="578" width="924" height="140"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISt-hX-lUc" userLabel="LeftButton" customClass="ResponseButton" customModule="GoNoGo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="216" height="100"/>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISt-hX-lUc" userLabel="LeftButton" customClass="ResponseButton" customModule="GoNoGo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="216" height="140"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                         <state key="normal" title="Vowel" image="VowelButton.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -168,8 +168,8 @@
                                             <action selector="leftButtonPressed:" destination="3uN-N6-O0y" eventType="touchUpInside" id="o3b-Ya-AC2"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RR1-JN-C05" userLabel="FruitButton" customClass="ResponseButton" customModule="GoNoGo" customModuleProvider="target">
-                                        <rect key="frame" x="236" y="0.0" width="216" height="100"/>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RR1-JN-C05" userLabel="FruitButton" customClass="ResponseButton" customModule="GoNoGo" customModuleProvider="target">
+                                        <rect key="frame" x="236" y="0.0" width="216" height="140"/>
                                         <state key="normal" title="Less Than" image="FruitButton.png">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -177,8 +177,8 @@
                                             <action selector="fruitButtonPressed:" destination="3uN-N6-O0y" eventType="touchUpInside" id="lhp-2W-cuv"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQ0-d3-tlA" userLabel="RedButton" customClass="ResponseButton" customModule="GoNoGo" customModuleProvider="target">
-                                        <rect key="frame" x="472" y="0.0" width="216" height="100"/>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQ0-d3-tlA" userLabel="RedButton" customClass="ResponseButton" customModule="GoNoGo" customModuleProvider="target">
+                                        <rect key="frame" x="472" y="0.0" width="216" height="140"/>
                                         <state key="normal" title="Even" image="RedButton.png">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -186,8 +186,8 @@
                                             <action selector="redButtonPressed:" destination="3uN-N6-O0y" eventType="touchUpInside" id="kdB-FF-jLV"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTH-RD-j9R" userLabel="RightButton" customClass="ResponseButton" customModule="GoNoGo" customModuleProvider="target">
-                                        <rect key="frame" x="708" y="0.0" width="216" height="100"/>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTH-RD-j9R" userLabel="RightButton" customClass="ResponseButton" customModule="GoNoGo" customModuleProvider="target">
+                                        <rect key="frame" x="708" y="0.0" width="216" height="140"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                         <state key="normal" title="Consonant" image="ConsonantButton.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -207,16 +207,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="m4I-l8-ad5" firstAttribute="leading" secondItem="Jc3-94-6bU" secondAttribute="leading" constant="50" id="106-Ha-SC3"/>
-                            <constraint firstItem="QUf-oY-C62" firstAttribute="centerY" secondItem="Jc3-94-6bU" secondAttribute="centerY" constant="-8" id="24V-Zc-O2j"/>
+                            <constraint firstItem="QUf-oY-C62" firstAttribute="centerY" secondItem="Jc3-94-6bU" secondAttribute="centerY" constant="-100" id="24V-Zc-O2j"/>
                             <constraint firstItem="Jc3-94-6bU" firstAttribute="trailing" secondItem="m4I-l8-ad5" secondAttribute="trailing" constant="50" id="3r1-1T-HYr"/>
                             <constraint firstItem="QUf-oY-C62" firstAttribute="centerX" secondItem="Jc3-94-6bU" secondAttribute="centerX" id="4xz-At-3o6"/>
-                            <constraint firstItem="ot3-dr-gSu" firstAttribute="centerY" secondItem="Jc3-94-6bU" secondAttribute="centerY" constant="-4" id="7oV-aW-u0P"/>
+                            <constraint firstItem="ot3-dr-gSu" firstAttribute="centerY" secondItem="Jc3-94-6bU" secondAttribute="centerY" constant="-100" id="7oV-aW-u0P"/>
                             <constraint firstItem="oxx-Ow-HGg" firstAttribute="leading" secondItem="Jc3-94-6bU" secondAttribute="leading" constant="50" id="9Zm-kh-3Dt"/>
                             <constraint firstItem="Jc3-94-6bU" firstAttribute="trailing" secondItem="oxx-Ow-HGg" secondAttribute="trailing" constant="50" id="IEu-7Z-HqA"/>
-                            <constraint firstItem="m4I-l8-ad5" firstAttribute="top" secondItem="ot3-dr-gSu" secondAttribute="bottom" constant="64" id="dAb-30-M9X"/>
+                            <constraint firstItem="m4I-l8-ad5" firstAttribute="top" secondItem="ot3-dr-gSu" secondAttribute="bottom" constant="15" id="dAb-30-M9X"/>
                             <constraint firstItem="ot3-dr-gSu" firstAttribute="centerX" secondItem="Jc3-94-6bU" secondAttribute="centerX" id="fCE-FU-zzp"/>
                             <constraint firstItem="Jc3-94-6bU" firstAttribute="bottom" secondItem="m4I-l8-ad5" secondAttribute="bottom" constant="50" id="mZ3-6Q-j8d"/>
                             <constraint firstItem="oxx-Ow-HGg" firstAttribute="top" secondItem="Jc3-94-6bU" secondAttribute="top" constant="40" id="r0P-Ss-xyn"/>
+                            <constraint firstItem="ot3-dr-gSu" firstAttribute="height" secondItem="9Kp-dG-Cfx" secondAttribute="height" multiplier="0.7" id="uzx-71-FXE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jc3-94-6bU"/>
                     </view>
