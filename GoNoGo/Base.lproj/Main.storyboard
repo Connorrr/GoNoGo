@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0WW-hO-bz5">
-    <device id="ipad9_7" orientation="portrait">
+    <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="0WW-hO-bz5" customClass="LoginViewController" customModule="GoNoGo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WaS-J6-3mS">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Participant ID" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3rb-4E-hqa" userLabel="idField">
-                                <rect key="frame" x="234" y="507" width="300" height="30"/>
+                                <rect key="frame" x="362" y="379" width="300" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="yWa-ud-6fA"/>
                                 </constraints>
@@ -28,7 +28,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yU5-BK-IdP" userLabel="startButton">
-                                <rect key="frame" x="234" y="608" width="300" height="55"/>
+                                <rect key="frame" x="362" y="480" width="300" height="55"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
@@ -36,7 +36,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your ID number and press start" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjG-bv-Umc" userLabel="enterIdLabel">
-                                <rect key="frame" x="259" y="179" width="250" height="250"/>
+                                <rect key="frame" x="387" y="51" width="250" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="0M1-kM-dev"/>
                                     <constraint firstAttribute="width" constant="250" id="yf9-kr-vbl"/>
@@ -46,7 +46,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Group Number" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tKK-AE-umW" userLabel="groupNumberField">
-                                <rect key="frame" x="234" y="558" width="300" height="30"/>
+                                <rect key="frame" x="362" y="430" width="300" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="0iH-1C-6Z8"/>
                                 </constraints>
@@ -87,11 +87,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GoNoGo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQJ-3k-GnA" userLabel="InstructionTextView" customClass="InstructionsTextView" customModule="GoNoGo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="20" width="768" height="1024"/>
+                                <rect key="frame" x="0.0" y="20" width="1024" height="768"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -127,15 +127,11 @@
             <objects>
                 <viewController id="3uN-N6-O0y" customClass="BlockViewController" customModule="GoNoGo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Kp-dG-Cfx">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NEx-hh-i0n" userLabel="Boarder View">
-                                <rect key="frame" x="109" y="247" width="550" height="550"/>
-                                <color key="backgroundColor" red="0.90007048850000004" green="0.62913995980000004" blue="0.40531009439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUf-oY-C62" userLabel="FixationCross">
-                                <rect key="frame" x="84" y="447" width="600" height="134"/>
+                                <rect key="frame" x="212" y="319" width="600" height="134"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="134" id="KLL-V9-DoM"/>
                                     <constraint firstAttribute="width" constant="600" id="vx3-jW-AdA"/>
@@ -144,15 +140,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOV-Z0-f2y" userLabel="StimLabel">
-                                <rect key="frame" x="134" y="272" width="500" height="500"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="204"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxx-Ow-HGg" userLabel="FeedbackLabel">
-                                <rect key="frame" x="50" y="60" width="668" height="200"/>
+                                <rect key="frame" x="50" y="60" width="924" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="c0B-da-qzZ"/>
                                 </constraints>
@@ -160,18 +149,17 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AF2" translatesAutoresizingMaskIntoConstraints="NO" id="ot3-dr-gSu" userLabel="StimImage">
-                                <rect key="frame" x="134" y="228" width="500.00000000000011" height="580"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="AF2" translatesAutoresizingMaskIntoConstraints="NO" id="ot3-dr-gSu" userLabel="StimImage">
+                                <rect key="frame" x="365.99999999999994" y="204" width="292.00000000000017" height="372"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="500" id="MgE-Iv-3c5"/>
                                     <constraint firstAttribute="width" secondItem="ot3-dr-gSu" secondAttribute="height" multiplier="1:1" constant="-80.000000000000114" id="f7k-0r-9mj"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="m4I-l8-ad5" userLabel="ButtonStackView">
-                                <rect key="frame" x="50" y="872" width="668" height="102"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="m4I-l8-ad5" userLabel="ButtonStackView">
+                                <rect key="frame" x="50" y="640" width="924" height="100"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISt-hX-lUc" userLabel="LeftButton" customClass="ResponseButton" customModule="GoNoGo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="152" height="102"/>
+                                    <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISt-hX-lUc" userLabel="LeftButton" customClass="ResponseButton" customModule="GoNoGo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="216" height="100"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                         <state key="normal" title="Vowel" image="VowelButton.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -180,8 +168,8 @@
                                             <action selector="leftButtonPressed:" destination="3uN-N6-O0y" eventType="touchUpInside" id="o3b-Ya-AC2"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RR1-JN-C05" userLabel="FruitButton" customClass="ResponseButton" customModule="GoNoGo" customModuleProvider="target">
-                                        <rect key="frame" x="172" y="0.0" width="152" height="102"/>
+                                    <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RR1-JN-C05" userLabel="FruitButton" customClass="ResponseButton" customModule="GoNoGo" customModuleProvider="target">
+                                        <rect key="frame" x="236" y="0.0" width="216" height="100"/>
                                         <state key="normal" title="Less Than" image="FruitButton.png">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -189,8 +177,8 @@
                                             <action selector="fruitButtonPressed:" destination="3uN-N6-O0y" eventType="touchUpInside" id="lhp-2W-cuv"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQ0-d3-tlA" userLabel="RedButton" customClass="ResponseButton" customModule="GoNoGo" customModuleProvider="target">
-                                        <rect key="frame" x="344" y="0.0" width="152" height="102"/>
+                                    <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQ0-d3-tlA" userLabel="RedButton" customClass="ResponseButton" customModule="GoNoGo" customModuleProvider="target">
+                                        <rect key="frame" x="472" y="0.0" width="216" height="100"/>
                                         <state key="normal" title="Even" image="RedButton.png">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -198,8 +186,8 @@
                                             <action selector="redButtonPressed:" destination="3uN-N6-O0y" eventType="touchUpInside" id="kdB-FF-jLV"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTH-RD-j9R" userLabel="RightButton" customClass="ResponseButton" customModule="GoNoGo" customModuleProvider="target">
-                                        <rect key="frame" x="516" y="0.0" width="152" height="102"/>
+                                    <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTH-RD-j9R" userLabel="RightButton" customClass="ResponseButton" customModule="GoNoGo" customModuleProvider="target">
+                                        <rect key="frame" x="708" y="0.0" width="216" height="100"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                         <state key="normal" title="Consonant" image="ConsonantButton.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -224,24 +212,15 @@
                             <constraint firstItem="QUf-oY-C62" firstAttribute="centerX" secondItem="Jc3-94-6bU" secondAttribute="centerX" id="4xz-At-3o6"/>
                             <constraint firstItem="ot3-dr-gSu" firstAttribute="centerY" secondItem="Jc3-94-6bU" secondAttribute="centerY" constant="-4" id="7oV-aW-u0P"/>
                             <constraint firstItem="oxx-Ow-HGg" firstAttribute="leading" secondItem="Jc3-94-6bU" secondAttribute="leading" constant="50" id="9Zm-kh-3Dt"/>
-                            <constraint firstItem="aOV-Z0-f2y" firstAttribute="trailing" secondItem="ot3-dr-gSu" secondAttribute="trailing" id="Gty-QG-afl"/>
                             <constraint firstItem="Jc3-94-6bU" firstAttribute="trailing" secondItem="oxx-Ow-HGg" secondAttribute="trailing" constant="50" id="IEu-7Z-HqA"/>
-                            <constraint firstItem="NEx-hh-i0n" firstAttribute="height" secondItem="ot3-dr-gSu" secondAttribute="height" constant="-30" id="Wu1-Og-G8U"/>
                             <constraint firstItem="m4I-l8-ad5" firstAttribute="top" secondItem="ot3-dr-gSu" secondAttribute="bottom" constant="64" id="dAb-30-M9X"/>
-                            <constraint firstItem="NEx-hh-i0n" firstAttribute="centerX" secondItem="Jc3-94-6bU" secondAttribute="centerX" id="dJK-cB-NpG"/>
                             <constraint firstItem="ot3-dr-gSu" firstAttribute="centerX" secondItem="Jc3-94-6bU" secondAttribute="centerX" id="fCE-FU-zzp"/>
-                            <constraint firstItem="aOV-Z0-f2y" firstAttribute="bottom" secondItem="ot3-dr-gSu" secondAttribute="bottom" constant="-36" id="kOT-T5-mQ9"/>
-                            <constraint firstItem="aOV-Z0-f2y" firstAttribute="top" secondItem="ot3-dr-gSu" secondAttribute="top" constant="44" id="lBk-Dd-PWy"/>
                             <constraint firstItem="Jc3-94-6bU" firstAttribute="bottom" secondItem="m4I-l8-ad5" secondAttribute="bottom" constant="50" id="mZ3-6Q-j8d"/>
-                            <constraint firstItem="aOV-Z0-f2y" firstAttribute="leading" secondItem="ot3-dr-gSu" secondAttribute="leading" id="npk-vs-ysN"/>
-                            <constraint firstItem="NEx-hh-i0n" firstAttribute="centerY" secondItem="Jc3-94-6bU" secondAttribute="centerY" id="puy-XR-iUF"/>
                             <constraint firstItem="oxx-Ow-HGg" firstAttribute="top" secondItem="Jc3-94-6bU" secondAttribute="top" constant="40" id="r0P-Ss-xyn"/>
-                            <constraint firstItem="NEx-hh-i0n" firstAttribute="width" secondItem="ot3-dr-gSu" secondAttribute="width" constant="50" id="uGc-zI-tP4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jc3-94-6bU"/>
                     </view>
                     <connections>
-                        <outlet property="boarderView" destination="NEx-hh-i0n" id="vtn-Zi-jCd"/>
                         <outlet property="feedbackLabel" destination="oxx-Ow-HGg" id="LS0-fb-Iii"/>
                         <outlet property="fixationCross" destination="QUf-oY-C62" id="st5-ji-RzL"/>
                         <outlet property="fruitButton" destination="RR1-JN-C05" id="4dV-4T-W89"/>
@@ -249,7 +228,6 @@
                         <outlet property="leftButton" destination="ISt-hX-lUc" id="AT1-Q7-OYr"/>
                         <outlet property="redButton" destination="lQ0-d3-tlA" id="DMP-Sd-qxQ"/>
                         <outlet property="stimImage" destination="ot3-dr-gSu" id="X2T-I5-X7W"/>
-                        <outlet property="stimLabel" destination="aOV-Z0-f2y" id="4s1-1N-glD"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="returnToInstructions" id="Bbe-oS-AWF"/>
                     </connections>
                 </viewController>
@@ -266,6 +244,6 @@
         <image name="VowelButton.png" width="209" height="209"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oVc-5C-Hki"/>
+        <segue reference="Bbe-oS-AWF"/>
     </inferredMetricsTieBreakers>
 </document>
