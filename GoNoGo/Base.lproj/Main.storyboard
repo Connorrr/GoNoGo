@@ -150,9 +150,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AF2" translatesAutoresizingMaskIntoConstraints="NO" id="ot3-dr-gSu" userLabel="StimImage">
-                                <rect key="frame" x="282.99999999999994" y="25" width="458.00000000000017" height="538"/>
+                                <rect key="frame" x="302.99999999999994" y="25" width="418.50000000000017" height="538"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="ot3-dr-gSu" secondAttribute="height" multiplier="1:1" constant="-80.000000000000114" id="f7k-0r-9mj"/>
+                                    <constraint firstAttribute="width" secondItem="ot3-dr-gSu" secondAttribute="height" multiplier="506:650" id="bgs-mO-3EF"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="m4I-l8-ad5" userLabel="ButtonStackView">
