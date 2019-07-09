@@ -155,53 +155,17 @@
                                     <constraint firstAttribute="width" secondItem="ot3-dr-gSu" secondAttribute="height" multiplier="506:650" id="bgs-mO-3EF"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="m4I-l8-ad5" userLabel="ButtonStackView">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="m4I-l8-ad5" userLabel="ButtonStackView">
                                 <rect key="frame" x="50" y="578" width="924" height="140"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISt-hX-lUc" userLabel="LeftButton" customClass="ResponseButton" customModule="GoNoGo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="216" height="140"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                        <state key="normal" title="Vowel" image="VowelButton.png">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pwm-rP-QrR" customClass="ResponseButton" customModule="GoNoGo" customModuleProvider="target">
+                                        <rect key="frame" x="357.5" y="0.0" width="209" height="140"/>
+                                        <state key="normal" image="ConsonantButton.png"/>
                                         <connections>
-                                            <action selector="leftButtonPressed:" destination="3uN-N6-O0y" eventType="touchUpInside" id="o3b-Ya-AC2"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RR1-JN-C05" userLabel="FruitButton" customClass="ResponseButton" customModule="GoNoGo" customModuleProvider="target">
-                                        <rect key="frame" x="236" y="0.0" width="216" height="140"/>
-                                        <state key="normal" title="Less Than" image="FruitButton.png">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="fruitButtonPressed:" destination="3uN-N6-O0y" eventType="touchUpInside" id="lhp-2W-cuv"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQ0-d3-tlA" userLabel="RedButton" customClass="ResponseButton" customModule="GoNoGo" customModuleProvider="target">
-                                        <rect key="frame" x="472" y="0.0" width="216" height="140"/>
-                                        <state key="normal" title="Even" image="RedButton.png">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="redButtonPressed:" destination="3uN-N6-O0y" eventType="touchUpInside" id="kdB-FF-jLV"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTH-RD-j9R" userLabel="RightButton" customClass="ResponseButton" customModule="GoNoGo" customModuleProvider="target">
-                                        <rect key="frame" x="708" y="0.0" width="216" height="140"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                        <state key="normal" title="Consonant" image="ConsonantButton.png">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="goButtonPressed:" destination="3uN-N6-O0y" eventType="touchUpInside" id="EkC-bZ-BNp"/>
+                                            <action selector="goButtonPressed:" destination="3uN-N6-O0y" eventType="touchUpInside" id="kJZ-3g-lFJ"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="RR1-JN-C05" firstAttribute="width" secondItem="ISt-hX-lUc" secondAttribute="width" id="C3A-X4-2oo"/>
-                                    <constraint firstItem="lQ0-d3-tlA" firstAttribute="width" secondItem="RR1-JN-C05" secondAttribute="width" id="qhc-Gg-bpg"/>
-                                    <constraint firstItem="DTH-RD-j9R" firstAttribute="width" secondItem="lQ0-d3-tlA" secondAttribute="width" id="sns-Yx-U78"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -224,10 +188,7 @@
                     <connections>
                         <outlet property="feedbackLabel" destination="oxx-Ow-HGg" id="LS0-fb-Iii"/>
                         <outlet property="fixationCross" destination="QUf-oY-C62" id="st5-ji-RzL"/>
-                        <outlet property="fruitButton" destination="RR1-JN-C05" id="4dV-4T-W89"/>
-                        <outlet property="goButton" destination="DTH-RD-j9R" id="0Ek-WI-hdw"/>
-                        <outlet property="leftButton" destination="ISt-hX-lUc" id="AT1-Q7-OYr"/>
-                        <outlet property="redButton" destination="lQ0-d3-tlA" id="DMP-Sd-qxQ"/>
+                        <outlet property="goButton" destination="Pwm-rP-QrR" id="uZP-T4-jPW"/>
                         <outlet property="stimImage" destination="ot3-dr-gSu" id="X2T-I5-X7W"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="returnToInstructions" id="Bbe-oS-AWF"/>
                     </connections>
@@ -240,11 +201,8 @@
     <resources>
         <image name="AF2" width="506" height="650"/>
         <image name="ConsonantButton.png" width="209" height="209"/>
-        <image name="FruitButton.png" width="100.08000183105469" height="100.08000183105469"/>
-        <image name="RedButton.png" width="100.08000183105469" height="100.08000183105469"/>
-        <image name="VowelButton.png" width="209" height="209"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oVc-5C-Hki"/>
+        <segue reference="Bbe-oS-AWF"/>
     </inferredMetricsTieBreakers>
 </document>

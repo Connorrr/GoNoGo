@@ -16,9 +16,6 @@ class BlockViewController: UIViewController {
     @IBOutlet weak var stimImage: UIImageView!
     @IBOutlet weak var fixationCross: UILabel!
     
-    @IBOutlet weak var leftButton: ResponseButton!
-    @IBOutlet weak var fruitButton: ResponseButton!     //  This button is not used in the TS app
-    @IBOutlet weak var redButton: ResponseButton!       //  This button is not used in the TS app
     @IBOutlet weak var goButton: ResponseButton!
     
     var blockType : BlockType?
@@ -41,12 +38,7 @@ class BlockViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //  Set middle buttons to be invis in the containers
-        redButton.alpha = 0.0
-        fruitButton.alpha = 0.0
-        leftButton.alpha = 0.0
-        
+    
         print("The block type is:  ")
         dump(blockType)
         
@@ -214,9 +206,6 @@ class BlockViewController: UIViewController {
     }
     
     func setButtonVisibility(isHidden: Bool) {
-        self.leftButton.isHidden = isHidden
-        self.fruitButton.isHidden = isHidden
-        self.redButton.isHidden = isHidden
         self.goButton.isHidden = isHidden
     }
     
