@@ -10,6 +10,9 @@ import UIKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate{
     
+    var keyboardAdjusted = false
+    var lastKeyboardOffset: CGFloat = 0.0       //  Used to shift the view when keyboard appears
+    
     @IBOutlet weak var idField: UITextField!
     @IBOutlet weak var groupNumberTextField: UITextField!
     @IBOutlet weak var startButton: UIButton!
@@ -23,18 +26,51 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
             beginTrials()
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super .viewWillAppear(animated)
+        NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         startButton.isEnabled = false
         groupNumberTextField.delegate = self
         groupNumberTextField.keyboardType = .numberPad
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super .viewDidDisappear(animated)
+        NotificationCenter.default.removeObserver(NSNotification.Name.UIKeyboardWillShow)
+        NotificationCenter.default.removeObserver(NSNotification.Name.UIKeyboardWillHide)
+
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if keyboardAdjusted == false {
+            lastKeyboardOffset = getKeyboardHeight()
+            view.frame.origin.y -= lastKeyboardOffset
+            keyboardAdjusted = true
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if keyboardAdjusted == true {
+            view.frame.origin.y += lastKeyboardOffset
+            keyboardAdjusted = false
+        }
+    }
+    
+    func getKeyboardHeight() -> CGFloat {
+        let shiftHeight = view.frame.height - (startButton.frame.origin.y + startButton.frame.height)
+        return shiftHeight
     }
     
     func showAlert(title: String, message: String){
