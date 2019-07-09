@@ -45,7 +45,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         super .viewDidDisappear(animated)
         NotificationCenter.default.removeObserver(NSNotification.Name.UIKeyboardWillShow)
         NotificationCenter.default.removeObserver(NSNotification.Name.UIKeyboardWillHide)
-
     }
 
     override func didReceiveMemoryWarning() {
