@@ -38,6 +38,8 @@
 		BF10700421BF791F00DC6207 /* LetterNumberStim.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF10700321BF791F00DC6207 /* LetterNumberStim.swift */; };
 		BF4B53E422D59CC10005EAB4 /* TriangleCircle.html in Resources */ = {isa = PBXBuildFile; fileRef = BF4B53E222D59CBF0005EAB4 /* TriangleCircle.html */; };
 		BF4B53E522D59CC10005EAB4 /* CircleTriangle.html in Resources */ = {isa = PBXBuildFile; fileRef = BF4B53E322D59CBF0005EAB4 /* CircleTriangle.html */; };
+		BF4B53E822D59EF60005EAB4 /* triangle.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4B53E622D59EF50005EAB4 /* triangle.png */; };
+		BF4B53E922D59EF60005EAB4 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4B53E722D59EF50005EAB4 /* circle.png */; };
 		BF4FE51321C9EA1600C758EF /* LeftButton.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4FE51121C9EA1500C758EF /* LeftButton.png */; };
 		BF4FE51421C9EA1600C758EF /* RightButton.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4FE51221C9EA1600C758EF /* RightButton.png */; };
 		BF4FE51921CA011700C758EF /* ConsonantButton.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4FE51521CA011600C758EF /* ConsonantButton.png */; };
@@ -150,6 +152,8 @@
 		BF10700321BF791F00DC6207 /* LetterNumberStim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterNumberStim.swift; sourceTree = "<group>"; };
 		BF4B53E222D59CBF0005EAB4 /* TriangleCircle.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = TriangleCircle.html; sourceTree = "<group>"; };
 		BF4B53E322D59CBF0005EAB4 /* CircleTriangle.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = CircleTriangle.html; sourceTree = "<group>"; };
+		BF4B53E622D59EF50005EAB4 /* triangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = triangle.png; sourceTree = "<group>"; };
+		BF4B53E722D59EF50005EAB4 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
 		BF4FE51121C9EA1500C758EF /* LeftButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LeftButton.png; path = Buttons/LeftButton.png; sourceTree = SOURCE_ROOT; };
 		BF4FE51221C9EA1600C758EF /* RightButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RightButton.png; path = Buttons/RightButton.png; sourceTree = SOURCE_ROOT; };
 		BF4FE51521CA011600C758EF /* ConsonantButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ConsonantButton.png; path = Buttons/ConsonantButton.png; sourceTree = SOURCE_ROOT; };
@@ -408,6 +412,8 @@
 				BF5433FE2293C3B60057E28A /* Faces */,
 				BF10700221BF789500DC6207 /* LetterNumberStim */,
 				BF106FCA21BF417800DC6207 /* 1.png */,
+				BF4B53E722D59EF50005EAB4 /* circle.png */,
+				BF4B53E622D59EF50005EAB4 /* triangle.png */,
 				BF106FE421BF417800DC6207 /* 2.png */,
 				BF106FC921BF417800DC6207 /* 3.png */,
 				BF106FC821BF417800DC6207 /* 4.png */,
@@ -638,6 +644,7 @@
 				BF54343A2293C4120057E28A /* NF1.png in Resources */,
 				BF5434382293C4120057E28A /* AF1.png in Resources */,
 				BF5434342293C4120057E28A /* AM4.png in Resources */,
+				BF4B53E822D59EF60005EAB4 /* triangle.png in Resources */,
 				BF884E07205A2044002262DB /* LaunchScreen.storyboard in Resources */,
 				BF4FE51C21CA011700C758EF /* VowelButton.png in Resources */,
 				BF91B91D20689E1F00C86DED /* Break.html in Resources */,
@@ -668,6 +675,7 @@
 				BF5434362293C4120057E28A /* NF3.png in Resources */,
 				BF106FFA21BF417900DC6207 /* 9.png in Resources */,
 				BF106FF621BF417900DC6207 /* rv4.jpg in Resources */,
+				BF4B53E922D59EF60005EAB4 /* circle.png in Resources */,
 				BF5434402293C4120057E28A /* HM3.png in Resources */,
 				BF4FE51A21CA011700C758EF /* EvenButton.png in Resources */,
 				BF54342A2293C4120057E28A /* NF2.png in Resources */,

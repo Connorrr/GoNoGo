@@ -90,6 +90,10 @@ class Block {
         case .practice:
             goSuffix = "H"
             noGoSuffix = "N"
+            if (StaticVars.isAbstract){
+                goSuffix = "triangle"
+                noGoSuffix = "circle"
+            }
             numNoGoM = 1
             numNoGoF = 2
             numGoM = 4
@@ -106,6 +110,12 @@ class Block {
         case .neutralhappy:
             goSuffix = "N"
             noGoSuffix = "H"
+        case .circletriangle:
+            goSuffix = "circle"
+            noGoSuffix = "triangle"
+        case .trianglecircle:
+            goSuffix = "triangle"
+            noGoSuffix = "circle"
         }
         
         var goList : [String] = []
@@ -115,25 +125,41 @@ class Block {
         //  Set nogo male names
         imageNums.shuffle()
         for i in 1 ... numNoGoM {
-            noGoList.append(noGoSuffix + "M" + String(imageNums[i%6]))
+            if (StaticVars.isAbstract){
+                noGoList.append(noGoSuffix)
+            }else{
+                noGoList.append(noGoSuffix + "M" + String(imageNums[i%6]))
+            }
         }
         
         //  set nogo female names
         imageNums.shuffle()
         for i in 1 ... numNoGoF {
-            noGoList.append(noGoSuffix + "F" + String(imageNums[i%6]))
+            if (StaticVars.isAbstract){
+                noGoList.append(noGoSuffix)
+            }else{
+                noGoList.append(noGoSuffix + "F" + String(imageNums[i%6]))
+            }
         }
         
         //  Set go male names
         imageNums.shuffle()
         for i in 1 ... numGoM {
-            goList.append(goSuffix + "M" + String(imageNums[i%6]))
+            if (StaticVars.isAbstract){
+                goList.append(goSuffix)
+            }else{
+                goList.append(goSuffix + "M" + String(imageNums[i%6]))
+            }
         }
         
         //  set go female names
         imageNums.shuffle()
         for i in 1 ... numGoF {
-            goList.append(goSuffix + "F" + String(imageNums[i%6]))
+            if (StaticVars.isAbstract){
+                goList.append(goSuffix)
+            }else{
+                goList.append(goSuffix + "F" + String(imageNums[i%6]))
+            }
         }
         
         goList.shuffle()

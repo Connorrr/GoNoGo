@@ -32,6 +32,9 @@ class ViewController: UIViewController, UITextViewDelegate {
         logFileMaker = LogFileMaker(fileName: "\(StaticVars.id)-\(getDateString())")
         
         //setExperimentStructure()  TODO:  Add this in when the group selection works
+        if (StaticVars.isAbstract){
+            experimentStructure = [.practice,.trianglecircle, .circletriangle];
+        }
         
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.viewTapped))
         instructionsTextView.addGestureRecognizer(tapRecognizer)
@@ -42,7 +45,11 @@ class ViewController: UIViewController, UITextViewDelegate {
         
         switch instructionsState! {
         case .openingText:
-            setText("Opening")
+            if (StaticVars.isAbstract){
+                setText("OpeningAbstract")
+            }else{
+                setText("Opening")
+            }
             setTestTimer(isFinished: false)
         case .breakText:
             setText("Break")
@@ -56,6 +63,10 @@ class ViewController: UIViewController, UITextViewDelegate {
                 setText("NeutralAngry")
             case .neutralhappy:
                 setText("NeutralHappy")
+            case .circletriangle:
+                setText("CircleTriangle")
+            case .trianglecircle:
+                setText("TriangleCircle")
             case .practice:
                 break
             }
