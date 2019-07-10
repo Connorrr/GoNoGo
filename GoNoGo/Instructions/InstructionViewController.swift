@@ -107,13 +107,9 @@ class ViewController: UIViewController, UITextViewDelegate {
         experimentStructure = [.practice, structure[0], structure[1], structure[2], structure[3]]
     }
     
-    var readyToBeginPractice = false
     @objc func viewTapped() {
         if instructionsState! == .goodbyeText {
             performSegue(withIdentifier: "instructionsToLogin", sender: nil)
-        } else if instructionsState! == .openingText && !readyToBeginPractice {
-            setText("Opening2")
-            readyToBeginPractice = true
         } else {
             performSegue(withIdentifier: "presentBlock", sender: nil)
         }

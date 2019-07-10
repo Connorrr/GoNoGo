@@ -150,7 +150,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AF2" translatesAutoresizingMaskIntoConstraints="NO" id="ot3-dr-gSu" userLabel="StimImage">
-                                <rect key="frame" x="302.99999999999994" y="25" width="418.50000000000017" height="538"/>
+                                <rect key="frame" x="303" y="25" width="418.5" height="538"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ot3-dr-gSu" secondAttribute="height" multiplier="506:650" id="bgs-mO-3EF"/>
                                 </constraints>
@@ -159,7 +159,7 @@
                                 <rect key="frame" x="50" y="578" width="924" height="140"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pwm-rP-QrR" customClass="ResponseButton" customModule="GoNoGo" customModuleProvider="target">
-                                        <rect key="frame" x="357.5" y="0.0" width="209" height="140"/>
+                                        <rect key="frame" x="454" y="0.0" width="16" height="140"/>
                                         <state key="normal" image="ConsonantButton.png"/>
                                         <connections>
                                             <action selector="goButtonPressed:" destination="3uN-N6-O0y" eventType="touchUpInside" id="kJZ-3g-lFJ"/>

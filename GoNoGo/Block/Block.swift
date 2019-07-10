@@ -88,8 +88,8 @@ class Block {
         
         switch blockType {
         case .practice:
-            goSuffix = "N"
-            noGoSuffix = "H"
+            goSuffix = "H"
+            noGoSuffix = "N"
             numNoGoM = 1
             numNoGoF = 2
             numGoM = 4
