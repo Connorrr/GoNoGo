@@ -13,4 +13,7 @@ enum BlockType {
     case neutralangry
     case happyneutral
     case neutralhappy
+    // for the abstract blocks
+    case trianglecircle
+    case circletriangle
 }
