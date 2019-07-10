@@ -256,6 +256,10 @@ class BlockViewController: UIViewController {
             trialData.blockType = "HappyNeutral"
         case .neutralhappy:
             trialData.blockType = "NeutralHappy"
+        case .circletriangle:
+            trialData.blockType = "CircleTriangle"
+        case .trianglecircle:
+            trialData.blockType = "TriangleCircle"
         }
         
         //  TODO:  Set the image for this trial

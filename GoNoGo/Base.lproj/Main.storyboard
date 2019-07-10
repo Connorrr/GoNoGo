@@ -155,11 +155,8 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AF2" translatesAutoresizingMaskIntoConstraints="NO" id="ot3-dr-gSu" userLabel="StimImage">
-                                <rect key="frame" x="302.99999999999994" y="25" width="418.50000000000017" height="538"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="ot3-dr-gSu" secondAttribute="height" multiplier="506:650" id="bgs-mO-3EF"/>
-                                </constraints>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AF2" translatesAutoresizingMaskIntoConstraints="NO" id="ot3-dr-gSu" userLabel="StimImage">
+                                <rect key="frame" x="258.99999999999994" y="25" width="506.00000000000017" height="538"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="m4I-l8-ad5" userLabel="ButtonStackView">
                                 <rect key="frame" x="50" y="578" width="924" height="140"/>
@@ -209,6 +206,6 @@
         <image name="ConsonantButton.png" width="209" height="209"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oVc-5C-Hki"/>
+        <segue reference="Bbe-oS-AWF"/>
     </inferredMetricsTieBreakers>
 </document>
