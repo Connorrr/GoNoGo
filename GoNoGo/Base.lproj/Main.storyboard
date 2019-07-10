@@ -54,9 +54,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="58a-Or-Cla">
+                                <rect key="frame" x="925" y="70" width="51" height="31"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Zh3-kQ-768" firstAttribute="trailing" secondItem="58a-Or-Cla" secondAttribute="trailing" constant="50" id="0lj-2N-b6p"/>
                             <constraint firstItem="tKK-AE-umW" firstAttribute="height" secondItem="3rb-4E-hqa" secondAttribute="height" id="8aZ-j4-4vN"/>
                             <constraint firstItem="3rb-4E-hqa" firstAttribute="top" secondItem="zjG-bv-Umc" secondAttribute="bottom" constant="78" id="EPo-vc-2G0"/>
                             <constraint firstItem="tKK-AE-umW" firstAttribute="centerX" secondItem="3rb-4E-hqa" secondAttribute="centerX" id="JEC-xb-Kxz"/>
@@ -67,11 +71,13 @@
                             <constraint firstItem="tKK-AE-umW" firstAttribute="width" secondItem="3rb-4E-hqa" secondAttribute="width" id="RDS-zS-saO"/>
                             <constraint firstItem="tKK-AE-umW" firstAttribute="top" secondItem="3rb-4E-hqa" secondAttribute="bottom" constant="21" id="atu-Rc-KUG"/>
                             <constraint firstItem="yU5-BK-IdP" firstAttribute="trailing" secondItem="3rb-4E-hqa" secondAttribute="trailing" id="f6K-5o-bTM"/>
+                            <constraint firstItem="58a-Or-Cla" firstAttribute="top" secondItem="Zh3-kQ-768" secondAttribute="top" constant="50" id="q3s-rb-IWT"/>
                             <constraint firstItem="zjG-bv-Umc" firstAttribute="centerX" secondItem="Zh3-kQ-768" secondAttribute="centerX" id="rSJ-va-Wfb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Zh3-kQ-768"/>
                     </view>
                     <connections>
+                        <outlet property="abstractSwitch" destination="58a-Or-Cla" id="hOq-qg-uuJ"/>
                         <outlet property="groupNumberTextField" destination="tKK-AE-umW" id="zmJ-xq-XHv"/>
                         <outlet property="idField" destination="3rb-4E-hqa" id="LmX-pW-WYd"/>
                         <outlet property="startButton" destination="yU5-BK-IdP" id="or9-LE-hSO"/>
@@ -150,7 +156,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AF2" translatesAutoresizingMaskIntoConstraints="NO" id="ot3-dr-gSu" userLabel="StimImage">
-                                <rect key="frame" x="303" y="25" width="418.5" height="538"/>
+                                <rect key="frame" x="302.99999999999994" y="25" width="418.50000000000017" height="538"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ot3-dr-gSu" secondAttribute="height" multiplier="506:650" id="bgs-mO-3EF"/>
                                 </constraints>
@@ -159,7 +165,7 @@
                                 <rect key="frame" x="50" y="578" width="924" height="140"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pwm-rP-QrR" customClass="ResponseButton" customModule="GoNoGo" customModuleProvider="target">
-                                        <rect key="frame" x="454" y="0.0" width="16" height="140"/>
+                                        <rect key="frame" x="357.5" y="0.0" width="209" height="140"/>
                                         <state key="normal" image="ConsonantButton.png"/>
                                         <connections>
                                             <action selector="goButtonPressed:" destination="3uN-N6-O0y" eventType="touchUpInside" id="kJZ-3g-lFJ"/>
@@ -203,6 +209,6 @@
         <image name="ConsonantButton.png" width="209" height="209"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Bbe-oS-AWF"/>
+        <segue reference="oVc-5C-Hki"/>
     </inferredMetricsTieBreakers>
 </document>

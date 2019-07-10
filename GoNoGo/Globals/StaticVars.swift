@@ -11,4 +11,5 @@ import Foundation
 public struct StaticVars {
     static var id : String = "NOID"
     static var group : Int = 0
+    static var isAbstract : Bool = false
 }

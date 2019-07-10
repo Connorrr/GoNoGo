@@ -16,6 +16,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var idField: UITextField!
     @IBOutlet weak var groupNumberTextField: UITextField!
     @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var abstractSwitch: UISwitch!
     
     @IBAction func startButtonPressed(_ sender: UIButton) {
         if (idField.text!.count == 0){
@@ -91,6 +92,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     }
     
     func beginTrials(){
+        StaticVars.isAbstract = abstractSwitch.isOn
         LogFileMaker.removeUserData()
         StaticVars.id = idField.text!
         StaticVars.group = Int(groupNumberTextField.text!)!
