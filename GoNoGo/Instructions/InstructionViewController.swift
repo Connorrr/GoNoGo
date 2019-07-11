@@ -31,10 +31,7 @@ class ViewController: UIViewController, UITextViewDelegate {
         
         logFileMaker = LogFileMaker(fileName: "\(StaticVars.id)-\(getDateString())")
         
-        //setExperimentStructure()  TODO:  Add this in when the group selection works
-        if (StaticVars.isAbstract){
-            experimentStructure = [.practice,.trianglecircle, .circletriangle];
-        }
+        setExperimentStructure()
         
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.viewTapped))
         instructionsTextView.addGestureRecognizer(tapRecognizer)
@@ -113,9 +110,26 @@ class ViewController: UIViewController, UITextViewDelegate {
     }
     
     func setExperimentStructure(){
-        var structure : [BlockType] = [.angryneutral, .happyneutral, .neutralangry, .neutralhappy]
-        structure.shuffle()
-        experimentStructure = [.practice, structure[0], structure[1], structure[2], structure[3]]
+
+        if (StaticVars.group == 1){
+            experimentStructure = [.practice, .angryneutral, .neutralangry, .happyneutral, .neutralhappy]
+        }else if(StaticVars.group == 2){
+            experimentStructure = [.practice, .neutralangry, .happyneutral, .neutralhappy, .angryneutral]
+        }else if(StaticVars.group == 3){
+            experimentStructure = [.practice, .happyneutral, .neutralhappy, .angryneutral, .neutralangry]
+        }else if(StaticVars.group == 4){
+            experimentStructure = [.practice, .neutralhappy, .angryneutral, .neutralangry, .happyneutral]
+        }else{
+            print("ERROR: InstructionsViewController: setExperimentStructure: Group num must be between 1-4")
+        }
+        
+        if(StaticVars.isAbstract){
+            if ((StaticVars.group % 2) == 0){
+                experimentStructure = [.practice, .trianglecircle, .circletriangle]
+            }else{
+                experimentStructure = [.practice, .circletriangle, .trianglecircle]
+            }
+        }
     }
     
     @objc func viewTapped() {
